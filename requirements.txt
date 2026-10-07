@@ -1,0 +1,27 @@
+# Web API
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+
+# Configuration
+python-dotenv==1.0.1
+pydantic==2.12.5
+
+# PDF processing
+PyMuPDF==1.25.1
+
+# Local semantic embeddings
+sentence-transformers==3.3.1
+
+# Local vector database
+chromadb==0.5.23
+
+# LLM providers
+# Current Google GenAI Python SDK; used by default.
+google-genai==2.28.0
+# Optional OpenAI provider.
+openai==1.58.1
+
+# Testing
+pytest==8.3.4
+httpx==0.28.1
