@@ -11,7 +11,8 @@ pydantic==2.12.5
 PyMuPDF==1.25.1
 
 # Local semantic embeddings
-sentence-transformers==3.3.1
+scikit-learn==1.9.1
+joblib==1.5.2
 
 # Local vector database
 chromadb==0.5.23

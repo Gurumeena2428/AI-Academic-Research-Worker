@@ -249,7 +249,7 @@ uploaded evidence does not contain.
                     step=len(self.steps) + 1,
                     action=f"Research subtask {index}: {research_step}",
                     tool="search_documents",
-                    input={"query": research_step, "top_k": 5},
+                    input={"query": research_step, "top_k": 8},
                     observation=observation,
                     success=success,
                 )

@@ -104,6 +104,21 @@ def query(
     )
     return results
 
+def reset_collection() -> None:
+    """Delete and recreate the entire vector collection."""
+    global _collection
+
+    if _client is None:
+        get_collection()
+
+    _client.delete_collection(name=settings.CHROMA_COLLECTION_NAME)
+    _collection = _client.create_collection(
+        name=settings.CHROMA_COLLECTION_NAME,
+        metadata={"hnsw:space": "cosine"},
+    )
+
+    logger.info("Reset Chroma collection '%s'", settings.CHROMA_COLLECTION_NAME)
+
 
 def delete_document_chunks(document_id: str) -> None:
     """Delete every chunk belonging to a document (used when the user deletes a PDF)."""
